@@ -116,8 +116,8 @@ on the discussion boards.
     times <- lapply(1:10, function(x) { system.time(cacheSolve(cm)) })
 
 The first run through gave me the following time:
-   user  system elapsed 
-  0.248   0.004   0.250
+   user  system elapsed  
+  0.248   0.004   0.250  
 And all subsequent times were at or very close to zero, signifying that 
 the matrix inverse was successfully cached, since time was not taken to 
 recompute it.
