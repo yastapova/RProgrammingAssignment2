@@ -103,3 +103,21 @@ In order to complete this assignment, you must do the following:
 ### Grading
 
 This assignment will be graded via peer assessment.
+
+### Self Testing
+
+Since I did not buy the course, I am locked out of the peer grading. To
+test my code myself, I followed one user's (Attila Marxer) suggestion 
+on the discussion boards.
+
+    set.seed(100)
+    m <- matrix(rnorm(1000000), 1000, 1000)
+    cm <- makeCacheMatrix(m)
+    times <- lapply(1:10, function(x) { system.time(cacheSolve(cm)) })
+
+The first run through gave me the following time:
+   user  system elapsed 
+  0.248   0.004   0.250
+And all subsequent times were at or very close to zero, signifying that 
+the matrix inverse was successfully cached, since time was not taken to 
+recompute it.
